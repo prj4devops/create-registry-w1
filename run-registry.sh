@@ -3,7 +3,7 @@ mkdir -p /data
 docker run -d \
   --restart=always \
   --name registry \
-  -v /root/create-registry:/cert:ro \
+  -v /root/create-registry:/certs:ro \
   -v /data:/var/lib/registry \
   -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
   -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/tls.crt \
